@@ -26,13 +26,13 @@ connection: {
     host: 'localhost',
     user: 'root',
     password: '',
-  },
-  oss: {
-    accessKeyId: '',
-    accessKeySecret: '',
-    region: '',
-    bucket: '',
-  },
-  dbNames: ['db1', 'db2', 'db3'], // 需要备份的数据库名称
-  cronStr: '00 30 5 * * *', // 定时任务 https://www.npmjs.com/package/node-cron#allowed-fields
+},
+oss: {
+  accessKeyId: '',
+  accessKeySecret: '',
+  region: '',
+  bucket: '',
+},
+dbNames: ['db1', 'db2', 'db3'], // 需要备份的数据库名称
+cronStr: '00 30 5 * * *', // 定时任务 https://www.npmjs.com/package/node-cron#allowed-fields
 ```
