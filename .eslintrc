@@ -1,0 +1,11 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "no-console": 0,
+    "max-len": 0,
+    "no-new": 0,
+    "no-plusplus": 0,
+    "newline-per-chained-call": 0,
+    "import/prefer-default-export": 0
+  }
+}
