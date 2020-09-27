@@ -11,7 +11,9 @@ services:
     networks:
       - flynet
     environment:
+      TZ: Asia/Shanghai
       NODE_ENV: production
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
       - ./data:/root/app/data
