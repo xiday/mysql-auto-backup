@@ -20,20 +20,23 @@
 
 ### 备份配置
 
+第一次运行自动生成配置文件
 `data/config.json5`
 
-```js
-connection: {
-    host: 'localhost',
-    user: 'root',
-    password: '',
-},
-oss: {
-  accessKeyId: '',
-  accessKeySecret: '',
-  region: '',
-  bucket: '',
-},
-dbNames: ['db1', 'db2', 'db3'], // 需要备份的数据库名称
-cronStr: '00 30 5 * * *', // 定时任务 https://www.npmjs.com/package/node-cron#allowed-fields
+```json
+{
+  "connection": {
+    "host": "localhost",
+    "user": "root",
+    "password": ""
+  },
+  "oss": {
+    "accessKeyId": "",
+    "accessKeySecret": "",
+    "region": "",
+    "bucket": ""
+  },
+  "dbNames": ["db1", "db2", "db3"], // 需要备份的数据库名称
+  "cronStr": "00 30 5 * * *" // 定时任务 https://www.npmjs.com/package/node-cron#allowed-fields
+}
 ```
