@@ -1,0 +1,17 @@
+version: '3.7'
+
+networks:
+  flynet:
+    external: true
+
+services:
+  main:
+    build: .
+    restart: unless-stopped
+    networks:
+      - flynet
+    environment:
+      NODE_ENV: production
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/root/app/data

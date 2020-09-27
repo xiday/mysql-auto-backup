@@ -1,5 +1,4 @@
 # Logs
-logs
 *.log
 *.orig
 
@@ -39,9 +38,6 @@ dist
 # Mac files
 .DS_Store
 
-yarn*
 npm-debug
-*.log
-backup
-build
-temp
+
+data/

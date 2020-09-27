@@ -14,12 +14,13 @@
 - `npm start` 开发模式
 - `npm run build` 打包部署
 - `npm run server` 启动服务
+- `npm run init-docker` 初始化 Docker 文件 (请先运行 npm run build)
 
 ## 配置
 
 ### 备份配置
 
-`src/config.js`
+`data/config.json5`
 
 ```js
 connection: {

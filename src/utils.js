@@ -1,4 +1,6 @@
+import path from 'path';
 import log4js from 'log4js';
+import { dataDir } from './config';
 
 log4js.configure({
   appenders: {
@@ -7,7 +9,7 @@ log4js.configure({
     },
     info: {
       type: 'file',
-      filename: 'logs/info.log',
+      filename: path.join(dataDir, 'logs', 'info.log'),
       maxLogSize: 1024 * 1024,
       backups: 3,
       keepFileExt: true,
@@ -30,10 +32,7 @@ const getDateStr = () => {
   const date = new Date();
   const year = date.getFullYear();
   const monthStr = (date.getMonth() + 1).toString().padStart(2, '0');
-  const dayStr = date
-    .getDate()
-    .toString()
-    .padStart(2, '0');
+  const dayStr = date.getDate().toString().padStart(2, '0');
   const secOfday = date.getHours() * 3600 + date.getMinutes() * 60 + date.getSeconds();
   return `${year}${monthStr}${dayStr}_${secOfday}`;
 };
